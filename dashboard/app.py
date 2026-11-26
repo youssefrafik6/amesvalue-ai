@@ -193,7 +193,7 @@ def pair_analysis(what_if):
 if page == PAGES[0]:
     st.markdown("### Historical sale prices, explained")
     st.write(
-        "Explore 2,930 Ames sales and see how a university regression study translates into a tested prediction service."
+        "Explore historical Ames sales, compare prediction models, and estimate sale prices with uncertainty intervals."
     )
     cols = st.columns(4)
     for col, label, value in zip(
