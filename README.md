@@ -105,7 +105,7 @@ Stack includes Python, R, pandas, NumPy, SciPy, scikit-learn, statsmodels, XGBoo
 
 This project is an educational machine learning demonstration using historical Ames Housing data. It is not a professional appraisal, mortgage valuation, or investment recommendation.
 
-Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md) · [Interview notes](docs/resume_bullets.md)
+Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md)
 
 ## License and research
 
