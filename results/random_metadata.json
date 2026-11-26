@@ -1,0 +1,38 @@
+{
+  "model": "Stepwise AIC",
+  "rows": {
+    "train": 1875,
+    "calibration": 469,
+    "test": 586
+  },
+  "intervals": [
+    {
+      "method": "Split conformal",
+      "nominal": 0.9,
+      "observed": 0.9215017064846417,
+      "mean_width": 78503.96873383701
+    },
+    {
+      "method": "Classical log OLS",
+      "nominal": 0.9,
+      "observed": 0.9505119453924915,
+      "mean_width": 90710.24856044057
+    },
+    {
+      "method": "Calibration residual bootstrap",
+      "nominal": 0.9,
+      "observed": 0.9351535836177475,
+      "mean_width": 85829.2177090462
+    }
+  ],
+  "sensitivity": {
+    "full_calibration_mae": 18085.970045588623,
+    "trimmed_calibration_mae": 18051.98891530312,
+    "removed_original_rows": [
+      1554,
+      2182,
+      2789
+    ]
+  },
+  "seed": 326
+}

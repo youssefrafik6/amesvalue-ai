@@ -1,0 +1,38 @@
+{
+  "model": "Extra Trees",
+  "rows": {
+    "train": 2080,
+    "calibration": 353,
+    "test": 497
+  },
+  "intervals": [
+    {
+      "method": "Split conformal",
+      "nominal": 0.9,
+      "observed": 0.9074446680080482,
+      "mean_width": 78728.3333333333
+    },
+    {
+      "method": "Classical log OLS",
+      "nominal": 0.9,
+      "observed": 0.9235412474849095,
+      "mean_width": 87231.3321502824
+    },
+    {
+      "method": "Calibration residual bootstrap",
+      "nominal": 0.9,
+      "observed": 0.9094567404426559,
+      "mean_width": 79337.70442460316
+    }
+  ],
+  "sensitivity": {
+    "full_calibration_mae": 16685.74071445908,
+    "trimmed_calibration_mae": 16182.396324199712,
+    "removed_original_rows": [
+      2182,
+      2181,
+      1499
+    ]
+  },
+  "seed": 326
+}

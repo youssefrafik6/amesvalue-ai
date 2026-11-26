@@ -1,0 +1,5 @@
+"Model","R_squared","Adjusted_R_squared","AIC","BIC","Max_VIF","Num_VIF_Over_10","BP_p_value"
+"Final Stepwise AIC Log Model",0.8875,0.8858,-3215,-2952.2,18.02,3,7.104e-13
+"Reduced VIF Model 1: Remove Total_Rooms",0.8873,0.8857,-3213.7,-2956.8,17.79,3,5.063e-13
+"Reduced VIF Model 2: Remove Total_Rooms + Basement_SqFt",0.8787,0.877,-3001,-2750.1,17.79,3,7.598e-14
+"No Neighborhood Model",0.872,0.8711,-2885.9,-2760.5,5.3,0,1.001e-09

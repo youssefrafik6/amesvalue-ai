@@ -1,0 +1,77 @@
+{
+  "rows": 2930,
+  "columns": 82,
+  "missing_by_field": {
+    "overall_quality": 0,
+    "living_area": 0,
+    "basement_area": 1,
+    "garage_area": 1,
+    "year_built": 0,
+    "year_remodeled": 0,
+    "first_floor_area": 0,
+    "lot_area": 0,
+    "full_baths": 0,
+    "total_rooms": 0,
+    "neighborhood": 0,
+    "house_style": 0,
+    "building_type": 0
+  },
+  "distinct_levels": {
+    "neighborhood": [
+      "Blmngtn",
+      "Blueste",
+      "BrDale",
+      "BrkSide",
+      "ClearCr",
+      "CollgCr",
+      "Crawfor",
+      "Edwards",
+      "Gilbert",
+      "Greens",
+      "GrnHill",
+      "IDOTRR",
+      "Landmrk",
+      "MeadowV",
+      "Mitchel",
+      "NAmes",
+      "NPkVill",
+      "NWAmes",
+      "NoRidge",
+      "NridgHt",
+      "OldTown",
+      "SWISU",
+      "Sawyer",
+      "SawyerW",
+      "Somerst",
+      "StoneBr",
+      "Timber",
+      "Veenker"
+    ],
+    "house_style": [
+      "1.5Fin",
+      "1.5Unf",
+      "1Story",
+      "2.5Fin",
+      "2.5Unf",
+      "2Story",
+      "SFoyer",
+      "SLvl"
+    ],
+    "building_type": [
+      "1Fam",
+      "2fmCon",
+      "Duplex",
+      "Twnhs",
+      "TwnhsE"
+    ]
+  },
+  "repeated_parcel_rows": 0,
+  "exact_duplicate_rows": 0,
+  "large_living_area_over_4000": 5,
+  "flagged_values": {
+    "construction_year": 1,
+    "remodel_year": 4,
+    "area": 0,
+    "quality": 0
+  }
+}
