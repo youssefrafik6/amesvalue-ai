@@ -110,6 +110,15 @@ def test_conformal_order_statistic():
         conformal_radius([1], [0], 0.9)
 
 
+@pytest.mark.parametrize(
+    "y,prediction,coverage",
+    [([1, 2], [[1], [2]], 0.5), ([1, 2], [1, np.nan], 0.5), ([1, 2], [1, 2], np.nan)],
+)
+def test_conformal_rejects_invalid_calibration(y, prediction, coverage):
+    with pytest.raises(ValueError):
+        conformal_radius(y, prediction, coverage)
+
+
 def test_disjoint_parcels_and_months():
     frame = pd.DataFrame(
         {

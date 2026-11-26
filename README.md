@@ -1,8 +1,6 @@
 # AmesValue AI
 
-**Explainable Real Estate Price Prediction & Analytics**
-
-AmesValue AI reproduces a university regression study in R and turns it into a testable Python valuation demo for historical Ames, Iowa sales. Explore price drivers, compare hypothetical homes, inspect diagnostics and request predictions with uncertainty intervals.
+AmesValue AI estimates historical home sale prices in Ames, Iowa, and returns prediction intervals. Use the Streamlit dashboard to compare hypothetical properties and inspect model diagnostics, or request predictions through FastAPI.
 
 ![AmesValue AI executive overview](screenshots/overview.png)
 
@@ -15,9 +13,9 @@ AmesValue AI reproduces a university regression study in R and turns it into a t
 | Chronological | Rolling CV MAE | **Extra Trees** | 497 | **$16,567** | $24,417 | **0.894** |
 | Random | Grouped CV MAE | Stepwise AIC | 586 | $21,671 | $100,480 | −0.397 |
 
-The app serves the rolling-validation winner. Its 90% conformal interval covered **90.7%** of later test sales, with mean width **$78,728**. On the random split, an atypically large home exposed the extrapolation risk of the log-linear benchmark. [Validation and interval details](docs/model_validation.md) · [All 16 candidate results](results/model_comparison.csv)
+The app serves the rolling-validation winner. Its 90% conformal interval covered **90.7%** of later test sales, with mean width **$78,728**. On the random split, Stepwise AIC predicted $2.17 million for one home that sold for $160,000. That error accounted for 68.5% of the model’s squared error on that holdout. The splits also selected different models and covered different sale cohorts, so the reported gap cannot be attributed to time alone. [Validation and interval details](docs/model_validation.md) · [All 16 candidate results](results/model_comparison.csv)
 
-The original MAT 326 analysis modeled 2,904 complete and filtered sales. Its Stepwise AIC model reproduced **adjusted log R² of 0.886**, **AIC of −3215.0**, and **43 coefficients**. Those values describe historical fit. The new holdouts retain the historically excluded sales and report errors in nominal dollars. [Original research and discrepancies](docs/original_research.md)
+The original MAT 326 analysis modeled 2,904 complete and filtered sales. Its Stepwise AIC model reproduced **adjusted log R² of 0.886**, **AIC of −3215.0**, and **43 coefficients**. Those values describe historical fit. The holdout benchmarks retain the historically excluded sales and report errors in nominal dollars. [Original research and discrepancies](docs/original_research.md)
 
 ## Architecture
 
@@ -64,7 +62,7 @@ python scripts/generate_reports.py
 
 The local workbook enables the records explorer, historical comparables, PDP/ICE and holdout scatterplots. Public Git excludes the workbook and record-level outputs because redistribution rights for the workbook could not be verified.
 
-### Reproduce MAT 326
+### Reproduce the R regression analysis
 
 With R and `renv` installed, run the following from the repository root.
 
@@ -94,7 +92,7 @@ Copy the `defaults` object from `GET /model-info` as a first prediction request 
 
 ## Deployment and checks
 
-Run `docker compose up --build` to launch both services using the read-only results mount. For Streamlit Community Cloud, select `dashboard/app.py` and Python 3.13. The bundled model and aggregate summaries power the predictor without R. Record-level views require local data. A deployed URL will exist only after the app is published.
+Run `docker compose up --build` to launch both services using the read-only results mount. For Streamlit Community Cloud, select `dashboard/app.py` and Python 3.13. The bundled model and aggregate summaries power the predictor without R. Record-level views require local data.
 
 ```bash
 ruff check .
@@ -107,10 +105,8 @@ Stack includes Python, R, pandas, NumPy, SciPy, scikit-learn, statsmodels, XGBoo
 
 This project is an educational machine learning demonstration using historical Ames Housing data. It is not a professional appraisal, mortgage valuation, or investment recommendation.
 
-Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md) · [Interview notes](docs/resume_bullets.md)
+Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md)
 
-**Youssef Rafik** · Southern Connecticut State University · Spring 2026 original research · [GitHub profile](https://github.com/youssefrafik6)
+## License and research
 
-[Publication handoff](docs/publication.md)
-
-[Verification record](docs/verification.md)
+[License](LICENSE) · [R study and attribution](docs/original_research.md) · [Verification record](docs/verification.md)
