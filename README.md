@@ -15,7 +15,7 @@ AmesValue AI reproduces a university regression study in R and turns it into a t
 | Chronological | Rolling CV MAE | **Extra Trees** | 497 | **$16,567** | $24,417 | **0.894** |
 | Random | Grouped CV MAE | Stepwise AIC | 586 | $21,671 | $100,480 | −0.397 |
 
-The app serves the rolling-validation winner. Its 90% conformal interval covered **90.7%** of later test sales, with mean width **$78,728**. On the random split, an atypically large home exposed the extrapolation risk of the log-linear benchmark. [Validation and interval details](docs/model_validation.md) · [All 16 candidate results](results/model_comparison.csv)
+The app serves the rolling-validation winner. Its 90% conformal interval covered **90.7%** of later test sales, with mean width **$78,728**. On the random split, Stepwise AIC predicted $2.17 million for one home that sold for $160,000. That error accounted for 68.5% of the model’s squared error on that holdout. The splits also selected different models and covered different sale cohorts, so the reported gap cannot be attributed to time alone. [Validation and interval details](docs/model_validation.md) · [All 16 candidate results](results/model_comparison.csv)
 
 The original MAT 326 analysis modeled 2,904 complete and filtered sales. Its Stepwise AIC model reproduced **adjusted log R² of 0.886**, **AIC of −3215.0**, and **43 coefficients**. Those values describe historical fit. The new holdouts retain the historically excluded sales and report errors in nominal dollars. [Original research and discrepancies](docs/original_research.md)
 
