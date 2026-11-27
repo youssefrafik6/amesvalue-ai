@@ -4,7 +4,7 @@
 
 AmesValue AI analyzes historical Ames, Iowa home sales with R regression and a Python valuation model. Explore price drivers, compare hypothetical homes, inspect diagnostics and request predictions with uncertainty intervals.
 
-[Source code](https://github.com/youssefrafik6/amesvalue-ai) · [Methodology](docs/methodology.md) · [Model validation](docs/model_validation.md)
+[Live demo](https://amesvalue-ai-yvtqyvpge8uw8plsxmpemv.streamlit.app/) · [Source code](https://github.com/youssefrafik6/amesvalue-ai) · [Methodology](docs/methodology.md) · [Model validation](docs/model_validation.md)
 
 ![AmesValue AI executive overview](screenshots/overview.png)
 
