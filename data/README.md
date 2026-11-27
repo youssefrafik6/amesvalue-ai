@@ -1,8 +1,8 @@
 # Data and attribution
 
-Copy the course workbook to `data/raw/AmesHousing.xls` before training. The publisher also hosts the [original workbook](https://jse.amstat.org/v19n3/decock/AmesHousing.xls) and [data documentation](https://jse.amstat.org/v19n3/decock/DataDocumentation.txt). Cite Dean De Cock (2011), *Ames, Iowa: Alternative to the Boston Housing Data as an End of Semester Regression Project*, Journal of Statistics Education 19(3), [DOI](https://doi.org/10.1080/10691898.2011.11889627).
+The training commands use the bundled [AmesHousing.xls](raw/AmesHousing.xls). The publisher also hosts the [original workbook](https://jse.amstat.org/v19n3/decock/AmesHousing.xls) and [data documentation](https://jse.amstat.org/v19n3/decock/DataDocumentation.txt). Cite Dean De Cock (2011), *Ames, Iowa: Alternative to the Boston Housing Data as an End of Semester Regression Project*, Journal of Statistics Education 19(3), [DOI](https://doi.org/10.1080/10691898.2011.11889627).
 
-An explicit redistribution license for the supplied original workbook was not verified. The raw data, filtered record export and observation-level generated files are excluded from public Git. The app uses local records for comparable sales and the explorer. The software license covers project code.
+The bundled workbook preserves the supplied file byte for byte. Its worksheet values and cell types match the journal supplement. Generated record-level outputs stay local. The software license covers project code.
 
 | Feature | Source field | Unit or meaning |
 |---|---|---|

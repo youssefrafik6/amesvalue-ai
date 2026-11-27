@@ -130,10 +130,8 @@ def test_disjoint_parcels_and_months():
                     ).min()
 
 
-def test_workbook_contract_when_available():
+def test_bundled_workbook_contract():
     workbook = Path("data/raw/AmesHousing.xls")
-    if not workbook.exists():
-        pytest.skip("Original workbook is provided locally")
     frame, audit = read_data(workbook)
     assert audit["rows"] == 2930 and audit["columns"] == 82
     assert set(FEATURES) <= set(frame)
