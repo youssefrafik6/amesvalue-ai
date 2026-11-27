@@ -55,7 +55,7 @@ Run the final two commands in separate terminals. The dashboard normally opens o
 
 ### Rebuild with the original workbook
 
-Place the workbook at `data/raw/AmesHousing.xls`. See the data documentation for the publisher's download and attribution. Run these commands from the repository root.
+The repository includes [AmesHousing.xls](data/raw/AmesHousing.xls) at the default input path. Run these commands from the repository root.
 
 ```bash
 python scripts/prepare_data.py
@@ -64,7 +64,7 @@ python scripts/evaluate_models.py
 python scripts/generate_reports.py
 ```
 
-The local workbook enables the records explorer, historical comparables, PDP/ICE and holdout scatterplots. Public Git excludes the workbook and record-level outputs because redistribution rights for the workbook could not be verified.
+The rebuild generates the local record-level outputs used by the records explorer, historical comparables, PDP/ICE and holdout scatterplots. Those generated outputs are excluded from version control.
 
 ### Reproduce MAT 326
 
