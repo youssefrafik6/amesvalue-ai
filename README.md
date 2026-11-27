@@ -2,7 +2,9 @@
 
 **Explainable Real Estate Price Prediction & Analytics**
 
-AmesValue AI reproduces a university regression study in R and turns it into a testable Python valuation demo for historical Ames, Iowa sales. Explore price drivers, compare hypothetical homes, inspect diagnostics and request predictions with uncertainty intervals.
+AmesValue AI analyzes historical Ames, Iowa home sales with R regression and a Python valuation model. Explore price drivers, compare hypothetical homes, inspect diagnostics and request predictions with uncertainty intervals.
+
+[Source code](https://github.com/youssefrafik6/amesvalue-ai) · [Methodology](docs/methodology.md) · [Model validation](docs/model_validation.md)
 
 ![AmesValue AI executive overview](screenshots/overview.png)
 
@@ -107,7 +109,9 @@ Stack includes Python, R, pandas, NumPy, SciPy, scikit-learn, statsmodels, XGBoo
 
 This project is an educational machine learning demonstration using historical Ames Housing data. It is not a professional appraisal, mortgage valuation, or investment recommendation.
 
-Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md) · [Interview notes](docs/resume_bullets.md)
+Neighborhood associations are observational. Accuracy and coverage vary across groups, especially for sparse neighborhoods and unusual properties. Future work could test newer external data, investigate drift and compare adaptive conformal methods. [Responsible use](docs/limitations.md)
+
+## Author
 
 **Youssef Rafik** · Southern Connecticut State University · Spring 2026 original research · [GitHub profile](https://github.com/youssefrafik6)
 
